@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "hopeful-altar-396808",
+  "private_key_id": "8971fa5af26495cae0b542873fc2502cc2a153f0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDPiCbfOo2rcAUZ\nhJKzMAvx6xE0Qtt52nst7V95s3tq9Vu9GzNGoKgVxrB7+hywgORRh6jG8NU3cYy3\nxfuWxr8JpvzYnzk3xZR5Ht11h/N54PPkWN6k8crPB2aruOpzKQoypmCMHI6eE/pX\nszuoJlffw4VOBIEzhrSwn07/ryCKmBF2AZNYBjDNmy2EsR8h+CNO9Z1SM+xrtwG2\nRGJsSXbUheTHdat2YHzxBuKM+bF7/jScK2qOBaCRTFjB1fPf2X7S0KK00LjUmLpz\n5CLOCZjx7IrXLiYcccq8ACahGouPN5hrrgLmEb4vQPVCBTUXbFCECZ+SKCnKPVe7\n7sGetHwFAgMBAAECggEABPEIf+s8gVcHAA8MkTC1MBr5S2XGJRYjNbo/uj2gVDEo\ncI3LwERGDFKxVBpmAXvoM9rHlYkZgpr1D1ErBvGPjfLIdX4BFkdhnCq0ej50+TN2\nizrkfkf1nM1fz/n0ty5EfGVCykNJ0BDItrrhUkUrdXwJ2gw4aVotRkFc17C7VSFz\n2ttdxmOeUpg9X3g3pduCVe9zERJB6YZnTYQBxuwm5Sg/G1MsFtoKAYEYUT1bbfA2\nyO/7y+zB4wW7f4GThs9E0hSGDANYWEYarq7Z5nERuEKKCZVmpWAG+/Q5JTHFBSUT\nC3MXa87R+PcKcPC/9+zaYxyWlNUMrNnZX8LYb9GtgQKBgQDoDZF/efE5Cb3jZecm\nT5VLG+MEh/hS6VkKELeHlHV9SK930jOgmWgaQ1Ks91GZ0muHP9JnVLRKawUDwR7n\nJjs5fnrnMEV1DdXSmrmEY/9Y5pp5os/QZmbfF5Acrk3CnN6YKR2kFIwofjDGJQCf\nxaTyOpWBZgxBQNw2faL8aVmGwQKBgQDk8scVoVGhr5gQ1R2eQQMW9S3ULDMSXiRq\nALYQvr1ypXz5noMFMxNQIj6yXynUBnvWbi9jNUomM3cRNgTi1DpXz1DfRk4D8QM4\nbodLHF4NoHtG6SlkGiqv7mPiBAoFvcEPREOdv4TM7gFvV41qeUMXwE/UxeJoWRAN\nYA3kGteqRQKBgFYgUxRBKirFVtkDhVtOxlZuL0ALRzteqFF4CuYjT8gEJjwOpGLD\nDURSIGlaEctJsecs5Oa9JX1JYz8VembIZcrdCrirzdu4Gthj3N8qTiesz0C+EOuE\nVkIO+MnsV6gXmPZYrEut5KdSzr98FFM4hBPzcnHocjv12sXOs6ODZlsBAoGADsNg\n9xIZ83UhNySm7kd+7YIN3HqlKHANpRA6rUW/bZ8iOe5wwGsUubwbkuD0D4oDfkZI\no/sRtvjmmqODGSVaRcNGkb801Kg77u2hp8RChFpu2Jm8Y4oUapfStQZRpyEfS965\nBXkOFTDbwtRAeDctjmCGRVAlU1k64cHp42WftokCgYARcs8tRb5lXI5f6oXGkfGT\nqj4kjN1+W4q02xez3NLACiOsLQHGEiLHMpeh774d7k6W6va+MGxJOqHFW73T5yod\nVjFLW46MSPdxeVbeg3mE1pEOY94Sp4juaCfPSpx9X2IcasFz+/gwAelGJxt6AuyD\nvgvSqNepBgqUe5n5y6kB5g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "google-sheets-api@hopeful-altar-396808.iam.gserviceaccount.com",
+  "client_id": "111524400052879918050",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/google-sheets-api%40hopeful-altar-396808.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
