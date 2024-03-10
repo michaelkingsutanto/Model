@@ -27,15 +27,15 @@ area = col1.selectbox('Area', ['Ang Mo Kio', 'Bedok', 'Bishan', 'Bukit Batok', '
        'Tampines', 'Tanglin', 'Toa Payoh', 'Woodlands', 'Yishun'])
 flat_type = col1.selectbox('Type', ['1 ROOM', '2 ROOM', '3 ROOM', '4 ROOM', '5 ROOM', 'EXECUTIVE', 'MULTI-GENERATION'])
 mid_storey = col1.number_input('Floor Number', value=5)
-distance_to_bus = col1.number_input('Distance to Bus Station', value=500)
-distance_to_hawker = col1.number_input('Distance to Hawker Centre', value=500)
+distance_to_bus = col1.number_input('Distance to Bus Station', value=500, step = 100)
+distance_to_hawker = col1.number_input('Distance to Hawker Centre', value=500, step = 100)
 
 # Col2
-size = col2.number_input('Size', value=500)
+size = col2.number_input('Size', value=500, step = 100)
 age = col2.number_input('Age', value=10)
-distance_to_mrt = col2.number_input('Distance to MRT Station', value=500)
-distance_to_mall = col2.number_input('Distance to Mall', value=500)
-distance_to_primary_school = col2.number_input('Distance to Primary School', value=500)
+distance_to_mrt = col2.number_input('Distance to MRT Station', value=500, step = 100)
+distance_to_mall = col2.number_input('Distance to Mall', value=500, step = 100)
+distance_to_primary_school = col2.number_input('Distance to Primary School', value=500, step = 100)
 
 # Predict Button
 flat_type_ohe = {'1 ROOM': [0, 0, 0, 0, 0, 0],
@@ -87,4 +87,5 @@ if st.button('Predict'):
     prediction = int(model.predict(features)[0])
     
     st.write(f'Predicted Price: ${prediction}')
+
 
