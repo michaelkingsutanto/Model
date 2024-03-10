@@ -5,9 +5,8 @@
 
 
 import streamlit as st
-import pandas as pd
-import numpy as np
 import pickle
+import pandas as pd
 
 # Load your model
 with open('lr_model.pkl', 'rb') as rf:
