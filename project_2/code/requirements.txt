@@ -1,0 +1,8 @@
+streamlit
+pandas
+numpy
+joblib
+scikit-learn
+gspread
+oauth2client
+streamlit_autorefresh
