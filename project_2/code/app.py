@@ -7,10 +7,11 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib 
+import pickle
 
 # Load your model
-model = joblib.load('model.pkl') 
+with open('lr_model.pkl', 'rb') as rf:
+    model = pickle.load(rf)
 
 # Title
 st.title("HDB Resale Price Prediction")
@@ -26,16 +27,16 @@ area = col1.selectbox('Area', ['Ang Mo Kio', 'Bedok', 'Bishan', 'Bukit Batok', '
        'Queenstown', 'Rochor', 'Sembawang', 'Sengkang', 'Serangoon',
        'Tampines', 'Tanglin', 'Toa Payoh', 'Woodlands', 'Yishun'])
 flat_type = col1.selectbox('Type', ['1 ROOM', '2 ROOM', '3 ROOM', '4 ROOM', '5 ROOM', 'EXECUTIVE', 'MULTI-GENERATION'])
-distance_to_mrt = col1.number_input('Distance to MRT Station', value=500)
+mid_storey = col1.number_input('Floor Number', value=5)
+distance_to_bus = col1.number_input('Distance to Bus Station', value=500)
 distance_to_hawker = col1.number_input('Distance to Hawker Centre', value=500)
-distance_to_primary_school = col1.number_input('Distance to Primary School', value=500)
 
 # Col2
 size = col2.number_input('Size', value=500)
 age = col2.number_input('Age', value=10)
-distance_to_bus = col2.number_input('Distance to Bus Station', value=500)
+distance_to_mrt = col2.number_input('Distance to MRT Station', value=500)
 distance_to_mall = col2.number_input('Distance to Mall', value=500)
-distance_to_secondary_school = col2.number_input('Distance to Secondary School', value=500)
+distance_to_primary_school = col2.number_input('Distance to Primary School', value=500)
 
 # Predict Button
 flat_type_ohe = {'1 ROOM': [0, 0, 0, 0, 0, 0],
@@ -79,7 +80,7 @@ area_ohe = {'Ang Mo Kio':[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
             'Woodlands':[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
             'Yishun':[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
            }
-hdb = [size, age, distance_to_mrt, distance_to_bus, distance_to_mall, distance_to_hawker, distance_to_primary_school, distance_to_secondary_school] + flat_type_ohe[flat_type] + area_ohe[area]
+hdb = [size, age, mid_storey, distance_to_mrt, distance_to_bus, distance_to_mall, distance_to_hawker, distance_to_primary_school] + flat_type_ohe[flat_type] + area_ohe[area]
 
 features = pd.DataFrame(hdb).transpose()
 
