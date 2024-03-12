@@ -27,16 +27,16 @@ area = col1.selectbox('Area', ['Ang Mo Kio', 'Bedok', 'Bishan', 'Bukit Batok', '
        'Sengkang', 'Serangoon', 'Tampines', 'Tanglin', 'Toa Payoh',
        'Western Water Catchment', 'Woodlands', 'Yishun'])
 flat_type = col1.selectbox('Type', ['1 ROOM', '2 ROOM', '3 ROOM', '4 ROOM', '5 ROOM', 'EXECUTIVE', 'MULTI-GENERATION'])
-mid_storey = col1.number_input('Floor Number', value=5)
-distance_to_bus = col1.number_input('Distance to Bus Station', value=500, step = 100)
-distance_to_hawker = col1.number_input('Distance to Hawker Centre', value=500, step = 100)
+mid_storey = col1.number_input('Floor Number', value=5, min_value=1, max_value=50)
+distance_to_bus = col1.number_input('Distance to Bus Station', value=500, step = 100, min_value=50, max_value=3000)
+distance_to_hawker = col1.number_input('Distance to Hawker Centre', value=500, step = 100, min_value=50, max_value=3000)
 
 # Col2
-size = col2.number_input('Size', value=500, step = 100)
-age = col2.number_input('Age', value=10)
-distance_to_mrt = col2.number_input('Distance to MRT Station', value=500, step = 100)
-distance_to_mall = col2.number_input('Distance to Mall', value=500, step = 100)
-distance_to_primary_school = col2.number_input('Distance to Primary School', value=500, step = 100)
+size = col2.number_input('Size', value=500, step = 100, min_value=200, max_value=2650)
+age = col2.number_input('Age', value=10, min_value=0, max_value=95)
+distance_to_mrt = col2.number_input('Distance to MRT Station', value=500, step = 100, min_value=50, max_value=3000)
+distance_to_mall = col2.number_input('Distance to Mall', value=500, step = 100, min_value=50, max_value=3000)
+distance_to_primary_school = col2.number_input('Distance to Primary School', value=500, step = 100, min_value=50, max_value=3000)
 
 # Predict Button
 flat_type_ohe = {'1 ROOM': [0, 0, 0, 0, 0, 0],
