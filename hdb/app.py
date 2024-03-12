@@ -9,7 +9,7 @@ import pickle
 import pandas as pd
 
 # Load your model
-with open('lr_model.pkl', 'rb') as rf:
+with open('hdb/lr_model.pkl', 'rb') as rf:
     model = pickle.load(rf)
 
 # Title
@@ -20,11 +20,12 @@ col1, col2 = st.columns(2)
 
 # Col 1
 area = col1.selectbox('Area', ['Ang Mo Kio', 'Bedok', 'Bishan', 'Bukit Batok', 'Bukit Merah',
-       'Bukit Panjang', 'Bukit Timah', 'Choa Chu Kang', 'Clementi',
-       'Geylang', 'Hougang', 'Jurong East', 'Jurong West', 'Kallang',
-       'Marine Parade', 'Novena', 'Outram', 'Pasir Ris', 'Punggol',
-       'Queenstown', 'Rochor', 'Sembawang', 'Sengkang', 'Serangoon',
-       'Tampines', 'Tanglin', 'Toa Payoh', 'Woodlands', 'Yishun'])
+       'Bukit Panjang', 'Bukit Timah', 'Changi', 'Choa Chu Kang',
+       'Clementi', 'Downtown Core', 'Geylang', 'Hougang', 'Jurong East',
+       'Jurong West', 'Kallang', 'Marine Parade', 'Novena', 'Outram',
+       'Pasir Ris', 'Punggol', 'Queenstown', 'Rochor', 'Sembawang',
+       'Sengkang', 'Serangoon', 'Tampines', 'Tanglin', 'Toa Payoh',
+       'Western Water Catchment', 'Woodlands', 'Yishun'])
 flat_type = col1.selectbox('Type', ['1 ROOM', '2 ROOM', '3 ROOM', '4 ROOM', '5 ROOM', 'EXECUTIVE', 'MULTI-GENERATION'])
 mid_storey = col1.number_input('Floor Number', value=5)
 distance_to_bus = col1.number_input('Distance to Bus Station', value=500, step = 100)
