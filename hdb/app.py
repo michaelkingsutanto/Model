@@ -19,24 +19,24 @@ st.title("HDB Resale Price Prediction")
 col1, col2 = st.columns(2)
 
 # Col 1
-area = col1.selectbox('Area', ['Ang Mo Kio', 'Bedok', 'Bishan', 'Bukit Batok', 'Bukit Merah',
+area = col1.selectbox('Planning Area', ['Ang Mo Kio', 'Bedok', 'Bishan', 'Bukit Batok', 'Bukit Merah',
        'Bukit Panjang', 'Bukit Timah', 'Changi', 'Choa Chu Kang',
        'Clementi', 'Downtown Core', 'Geylang', 'Hougang', 'Jurong East',
        'Jurong West', 'Kallang', 'Marine Parade', 'Novena', 'Outram',
        'Pasir Ris', 'Punggol', 'Queenstown', 'Rochor', 'Sembawang',
        'Sengkang', 'Serangoon', 'Tampines', 'Tanglin', 'Toa Payoh',
        'Western Water Catchment', 'Woodlands', 'Yishun'])
-flat_type = col1.selectbox('Type', ['1 ROOM', '2 ROOM', '3 ROOM', '4 ROOM', '5 ROOM', 'EXECUTIVE', 'MULTI-GENERATION'])
+flat_type = col1.selectbox('Flat Type', ['1 ROOM', '2 ROOM', '3 ROOM', '4 ROOM', '5 ROOM', 'EXECUTIVE', 'MULTI-GENERATION'])
 mid_storey = col1.number_input('Floor Number', value=5, min_value=1, max_value=50)
-distance_to_bus = col1.number_input('Distance to Bus Station', value=500, step = 100, min_value=50, max_value=3000)
-distance_to_hawker = col1.number_input('Distance to Hawker Centre', value=500, step = 100, min_value=50, max_value=3000)
+distance_to_bus = col1.number_input('Distance to Bus Station (m)', value=500, step = 100, min_value=50, max_value=3000)
+distance_to_hawker = col1.number_input('Distance to Hawker Centre (m)', value=500, step = 100, min_value=50, max_value=3000)
 
 # Col2
-size = col2.number_input('Size', value=500, step = 100, min_value=200, max_value=2650)
-age = col2.number_input('Age', value=10, min_value=0, max_value=95)
-distance_to_mrt = col2.number_input('Distance to MRT Station', value=500, step = 100, min_value=50, max_value=3000)
-distance_to_mall = col2.number_input('Distance to Mall', value=500, step = 100, min_value=50, max_value=3000)
-distance_to_primary_school = col2.number_input('Distance to Primary School', value=500, step = 100, min_value=50, max_value=3000)
+size = col2.number_input('Size (sqft)', value=500, step = 100, min_value=200, max_value=2650)
+age = col2.number_input('Age (year)', value=10, min_value=0, max_value=95)
+distance_to_mrt = col2.number_input('Distance to MRT Station (m)', value=500, step = 100, min_value=50, max_value=3000)
+distance_to_mall = col2.number_input('Distance to Mall (m)', value=500, step = 100, min_value=50, max_value=3000)
+distance_to_primary_school = col2.number_input('Distance to Primary School (m)', value=500, step = 100, min_value=50, max_value=3000)
 
 # Predict Button
 flat_type_ohe = {'1 ROOM': [0, 0, 0, 0, 0, 0],
@@ -86,7 +86,8 @@ features = pd.DataFrame(hdb).transpose()
 
 if st.button('Predict'):
     prediction = int(model.predict(features)[0])
-    
-    st.write(f'Predicted Price: ${prediction}')
+    formatted_prediction = "{:,.0f}".format(prediction)
+    # st.write(f'Predicted Price: ${formatted_prediction}')
+    st.write(f'Predicted Price: <span style="font-size:24px; color:green;">${formatted_prediction}</span>', unsafe_allow_html=True)
 
 
