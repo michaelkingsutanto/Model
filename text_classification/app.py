@@ -21,7 +21,7 @@ user_input = st.text_area("Enter text here")
 if st.button('Predict'):
     prediction = model.predict([user_input])[0]
     if prediction == 0:
-        st.write(Input doesn't align with Omega community")
+        st.write("Input doesn't align with Omega community")
     else:
-        st.write(Input aligns with Omega community")
+        st.write("Input aligns with Omega community")
 
